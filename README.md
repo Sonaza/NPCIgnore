@@ -10,6 +10,7 @@ If you wish to completely mute Rhonin I suggest getting [STFU Rhonin!](https://m
 
 ### Usage
 By default the addon ignores some NPCs:
+
 * Topper McNabb
 * Rhonin
 
