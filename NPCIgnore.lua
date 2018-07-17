@@ -30,15 +30,20 @@ SLASH_NPCIGNORE1 = "/npcignore";
 SlashCmdList["NPCIGNORE"] = function(name)
 	local ignorename = strtrim(strlower(name) or "")
 	if(strlen(ignorename) == 0) then
-		addmessage("Usage: /npcignore name");
-		return;
+		if(not UnitIsPlayer("target") and UnitName("target")) then
+			name = UnitName("target");
+			ignorename = strlower(UnitName("target"));
+		else
+			addmessage("Usage: |cffffdd00/npcignore name|r or target an NPC and use the command.");
+			return;
+		end
 	end
 	
 	if(not IgnoreList[ignorename]) then
 		IgnoreList[ignorename] = true;
-		addmessage("Ignored NPC %s.", strtrim(name));
+		addmessage("Ignored NPC |cffffdd00%s|r.", strtrim(name));
 	else
 		IgnoreList[ignorename] = nil;
-		addmessage("Unignored NPC %s.", strtrim(name));
+		addmessage("Unignored NPC |cffffdd00%s|r.", strtrim(name));
 	end
 end

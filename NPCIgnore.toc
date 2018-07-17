@@ -1,8 +1,8 @@
-## Interface: 70000
+## Interface: 80000
 ## Title: NPCIgnore
 ## Notes: Ignore NPCs who can't realize they should stfu
 ## Author: Sonaza
-## Version: 1.1.0
+## Version: 1.1.2
 ## SavedVariables: IgnoreList
 
 NPCIgnore.lua
