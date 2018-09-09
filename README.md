@@ -14,4 +14,4 @@ By default the addon ignores some NPCs:
 * Topper McNabb
 * Rhonin
 
-If you wish to ignore or unignore NPCs you can do it by typing **/npcignore npcname**.
+If you wish to ignore or unignore NPCs you can do it by typing **/npcignore npcname**. To view currently ignored NPCs type **/npcignore list**.

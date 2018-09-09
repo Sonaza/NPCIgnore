@@ -1,3 +1,6 @@
+## 1.1.3
+* Added a command option to list current ignored NPCs.
+
 ## 1.1.2
 * Updated for Battle for Azeroth.
 

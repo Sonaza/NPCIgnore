@@ -34,9 +34,22 @@ SlashCmdList["NPCIGNORE"] = function(name)
 			name = UnitName("target");
 			ignorename = strlower(UnitName("target"));
 		else
-			addmessage("Usage: |cffffdd00/npcignore name|r or target an NPC and use the command.");
+			addmessage("Usage:");
+			addmessage(" |cffffdd00/npcignore name|r or target an NPC and use the command.");
+			addmessage(" |cffffdd00/npcignore list|r lists all ignored NPCs.");
 			return;
 		end
+	end
+	
+	if (ignorename == "list") then
+		local counter = 0;
+		addmessage("Currently ignored NPCs:");
+		for name, _ in pairs(IgnoreList) do
+			addmessage(name);
+			counter = counter + 1;
+		end
+		addmessage("%d NPCs are ignored. Type /npcignore name to unignore.", counter);
+		return;
 	end
 	
 	if(not IgnoreList[ignorename]) then
